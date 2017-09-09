@@ -1,3 +1,4 @@
+<h2>New Student</h2>
 <form role="form" class="" method="post" action="<?php echo base_url('sms/save?a=add'); ?>" >
 				
 				<div class="text-danger">
@@ -35,7 +36,7 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="sex">Sex</label>
+					<label for="sex">Sex: </label>
 					<input type="radio" class="" id="sex" name="sex" value="M" /> Male
 					<input type="radio" class="" id="sex" name="sex" value="F" /> Female
 				</div>	

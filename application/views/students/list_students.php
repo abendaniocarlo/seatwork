@@ -1,10 +1,13 @@
-<h1>Students - View Students</h1>
-<a href="<?php echo base_url('sms/add/'); ?>" >Add student</a>
+<h1>List Of Students</h1>
+<a href="<?php echo base_url('sms/add/'); ?>" class="btn btn-success btn-md">
+<span class="glyphicon glyphicon-plus-sign"></span>  Add student</a>
+<br />
+<br />
 <table class="table">
 	<thead>
 		<tr>
 			<th>ID NO.</th>
-			<th>LAST NAME</th>
+			<th>STUDENT'S NAME</th>
 			<th>COURSE</th>
 			<th>ACTION</th>
 		</tr>
@@ -14,7 +17,7 @@
 	foreach($students as $s){
 		echo '	<tr >	
 					<td>'.$s['idno'].'</td>
-					<td>'.$s['lname'].'</td>
+					<td>'.$s['fname'].' '.$s['lname'].'</td>
 					<td>'.$s['course'].'</td>
 					<td>
 						<a href="'.base_url('sms/view/'.$s['idno']).'">View</a> |

@@ -1,3 +1,4 @@
+<h2>Update Student</h2>
 <form role="form" class="" method="post" action="<?php echo base_url('sms/save?a=edit'); ?>" >
 				
 				<div class="text-danger">
@@ -10,7 +11,7 @@
 				
 				<div class="form-group">
 					<label for="idno">ID No.:</label>
-					<input type="text" class="form-control" id="idno" name="idno" value="<?php echo $students[0]['idno']; ?>" />
+					<input type="text" class="form-control" id="idno" name="idno" value="<?php echo $students[0]['idno']; ?>"  disabled>
 				</div>
 				<div class="form-group">
 					<label for="lname">Last Name:</label>

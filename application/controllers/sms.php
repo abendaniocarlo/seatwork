@@ -27,7 +27,7 @@ class sms extends CI_Controller {
 		$condition = array('idno'=>$id);
 		$info = $this->students->read($condition);
 		$data['students'] = $info;
-		echo $id;
+		//echo $id;
 		$this->load->view('include/header',$header_data);
 		$this->load->view('students/view_student',$data);
 		$this->load->view('include/footer');
@@ -83,7 +83,7 @@ class sms extends CI_Controller {
 
 	public function edit($id){
 
-		$header_data['title'] = 'edit student';
+		$header_data['title'] = 'Editing student record...';
 		$listcourse = $this->course->read();
 		$condition = array('idno'=>$id);
 		$liststud = $this->students->read($condition);
@@ -109,15 +109,20 @@ class sms extends CI_Controller {
 	}//end of course function 
 
 	public function addcourse(){
-
 		$header_data['title'] = 'Add course';
 		$list = $this->course->read();
 		$data['course'] = $list;
-
 		$this->load->view('include/header',$header_data);
-		$this->load->view('students/new_student',$data);
+		$this->load->view('course/add_courses',$data);
 		$this->load->view('include/footer');
-
 	}//end of add function
+	public function savecourse(){
+		
+		$course = $_POST['coursename'];
+	
+		$data = array('id'=>null,'coursename'=>$course);
+		$this->course->create($data);
+		redirect('sms/course');
+		}
 
 }
