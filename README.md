@@ -1,5 +1,5 @@
-# sms
-sms by man-awit and abendanio
+# seatwork
+Student Management System by Man-awit and Abendanio
 
 
 Contributors:
