@@ -53,6 +53,7 @@ class sms extends CI_Controller {
 		$mname = $_POST['mname'];
 		$course = $_POST['course'];
 		$sex = $_POST['sex'];
+		
 		if($_GET['a']=='add'){
 				$data = array('id'=>null,'idno'=>$id,'lname'=>$lname,'fname'=>$fname,'mname'=>$mname,'course'=>$course,'sex'=>$sex);
 				$this->students->create($data);
@@ -123,6 +124,19 @@ class sms extends CI_Controller {
 		$data = array('id'=>null,'coursename'=>$course);
 		$this->course->create($data);
 		redirect('sms/course');
+		}
+
+	public function savecourse(){
+
+		
+		$course = $_POST['coursename'];
+	
+		
+		
+				$data = array('id'=>null,'coursename'=>$course);
+				$this->course->create($data);
+
+				redirect('sms/course');
 		}
 
 }

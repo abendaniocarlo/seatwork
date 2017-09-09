@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <h2>New Course</h2>
+=======
+>>>>>>> origin/master
 <form role="form" class="" method="post" action="<?php echo base_url('sms/savecourse'); ?>" >
 				
 				<div class="text-danger">
