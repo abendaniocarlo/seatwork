@@ -1,5 +1,5 @@
 <h1>List of Courses</h1>
-<a href="<?php echo base_url('sms/add/'); ?>" >Add course</a>
+<a href="<?php echo base_url('sms/addcourse/'); ?>" >Add course</a>
 <table class="table">
 	<thead>
 		<tr>
