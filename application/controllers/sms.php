@@ -116,9 +116,22 @@ class sms extends CI_Controller {
 		$data['course'] = $list;
 
 		$this->load->view('include/header',$header_data);
-		$this->load->view('students/new_student',$data);
+		$this->load->view('course/add_courses',$data);
 		$this->load->view('include/footer');
 
 	}//end of add function
+
+	public function savecourse(){
+
+		
+		$course = $_POST['coursename'];
+	
+		
+		
+				$data = array('id'=>null,'coursename'=>$course);
+				$this->course->create($data);
+
+				redirect('sms/course');
+		}
 
 }
