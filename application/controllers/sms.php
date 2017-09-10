@@ -44,23 +44,26 @@ class sms extends CI_Controller {
 
 	}//end of del function
 
-	public function save(){
+	public function save($id=null){
 
 		
-		$id = $_POST['idno'];
+		
 		$lname = $_POST['lname'];
 		$fname = $_POST['fname'];
 		$mname = $_POST['mname'];
 		$course = $_POST['course'];
 		$sex = $_POST['sex'];
-		
+		echo  $id;
 		if($_GET['a']=='add'){
+			$id = $_POST['idno'];
 				$data = array('id'=>null,'idno'=>$id,'lname'=>$lname,'fname'=>$fname,'mname'=>$mname,'course'=>$course,'sex'=>$sex);
 				$this->students->create($data);
 		}
 		if($_GET['a']=='edit'){
+			$id = $_GET['id'];
+			$i = $_GET['i'];
 			
-			$data = array('id'=>null,'idno'=>$id,'lname'=>$lname,'fname'=>$fname,'mname'=>$mname,'course'=>$course,'sex'=>$sex);
+			$data = array('id'=>$i,'idno'=>$id,'lname'=>$lname,'fname'=>$fname,'mname'=>$mname,'course'=>$course,'sex'=>$sex);
 			$condition = array('idno'=>$id);
 			$this->students->update($data,$condition);
 		}

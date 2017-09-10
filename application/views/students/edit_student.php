@@ -1,5 +1,5 @@
 <h2>Update Student</h2>
-<form role="form" class="" method="post" action="<?php echo base_url('sms/save?a=edit'); ?>" >
+<form role="form" class="" method="post" action="<?php echo base_url('sms/save?id='.$students[0]['idno'].'&i='.$students[0]['id'].'&a=edit'); ?>" >
 				
 				<div class="text-danger">
 				<?php
