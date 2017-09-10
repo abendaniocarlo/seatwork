@@ -126,17 +126,4 @@ class sms extends CI_Controller {
 		redirect('sms/course');
 		}
 
-	public function savecourse(){
-
-		
-		$course = $_POST['coursename'];
-	
-		
-		
-				$data = array('id'=>null,'coursename'=>$course);
-				$this->course->create($data);
-
-				redirect('sms/course');
-		}
-
 }
